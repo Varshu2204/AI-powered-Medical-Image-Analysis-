@@ -14,7 +14,7 @@ from reportlab.pdfgen import canvas
 # 🔑 Load API Key securely
 # =========================
 # Explicitly load .env from current folder
-load_dotenv(dotenv_path="C:/Users/varsh/OneDrive/code with me/varshu/medical_imaging/.env")
+load_dotenv(dotenv_path="YOUR API KEY.env")
 
 # Get the key from .env
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -212,4 +212,5 @@ if len(st.session_state.history) >= 2:
             st.markdown(r1["report"], unsafe_allow_html=True)
         with colB:
             st.markdown(f"### 🖼️ {r2['filename']}")
+
             st.markdown(r2["report"], unsafe_allow_html=True)
